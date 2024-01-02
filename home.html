@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EClicin - HOME PAGE</title>
+
+    <link rel="icon" href="assets/favicon_io/favicon.ico" type="image/x-icon" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
+
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body background="/assets/heroBg.jpeg">
+    <header>
+      <h2 class="logo">E-CLINIC WORKS</h2>
+      <nav class="navigation">
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">APPOINTMENT</a>
+        <a href="#">CONTACT</a>
+        <button class="btnLogin-popup">LOGIN</button>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <span class="icon-close">
+        <ion-icon name="close-outline"></ion-icon>
+      </span>
+      <div class="form-box login">
+        <h2>LOGIN</h2>
+        <!-- login start -->
+        <form method="">
+          <div class="input-box">
+            <span class="icon"
+              ><ion-icon name="person-outline"></ion-icon
+            ></span>
+            <input
+              type="email"
+              id="login_email1"
+              name="email"
+              id="login_email"
+              required
+            />
+            <label>Email-ID</label>
+          </div>
+          <button type="submit" id="login_with_email_link_submit" class="btn">
+            Send Email
+          </button>
+        </form>
+        <div class="orDiv">-- OR --</div>
+        <form method="">
+          <div class="input-box">
+            <span class="icon"
+              ><ion-icon name="person-outline"></ion-icon
+            ></span>
+            <input
+              type="email"
+              id="login_email2"
+              name="email"
+              id="login_email"
+              required
+            />
+            <label>Email-ID</label>
+          </div>
+          <div class="input-box">
+            <span class="icon"
+              ><ion-icon name="person-outline"></ion-icon
+            ></span>
+            <input
+              type="email"
+              id="login_password"
+              name="password"
+              id="login_password"
+              required
+            />
+            <label>Password</label>
+          </div>
+          <div class="login-register">
+            <p>
+              Forget password?
+              <a href="/forget_password.html">RESET</a>
+            </p>
+          </div>
+          <button type="submit" id="login_with_password_submit" class="btn">
+            PROCEED
+          </button>
+        </form>
+        <div class="login-register">
+          <p>
+            Not registered yet?
+            <a href="#" class="register-link"> REGISTER NOW!!</a>
+          </p>
+        </div>
+        <!-- login end -->
+      </div>
+      <div class="form-box register">
+        <h2>Registeration</h2>
+        <!-- register start -->
+        <form action="#" method="post">
+          <div class="input-box">
+            <input type="text" name="fullname" id="fullname" required />
+            <label>Full Name</label>
+            <span class="icon"
+              ><ion-icon name="person-outline"></ion-icon
+            ></span>
+          </div>
+          <div class="input-box">
+            <input type="date" name="dob" id="dob" required />
+            <label>Birth Date</label>
+            <span class="icon"
+              ><ion-icon name="calendar-outline"></ion-icon
+            ></span>
+          </div>
+          <div class="input-box">
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              required
+              pattern="[0-9]{10}"
+            />
+            <label>Phone No</label>
+            <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+          </div>
+          <div class="input-box">
+            <input type="email" name="email" id="email" required />
+            <label>Email-ID</label>
+            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+          </div>
+          <div class="input-box">
+            <input type="password" name="password" id="password" required />
+            <label>Password</label>
+            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+          </div>
+          <div class="remember">
+            <label
+              ><input type="checkbox" required />Agree to Terms &
+              Conditions</label
+            >
+          </div>
+          <button type="submit" id="register_submit" class="btn">
+            REGISTER
+          </button>
+          <div class="login-register">
+            <p>
+              Already Registered??
+              <a href="#" class="login-link">LOGIN</a>
+            </p>
+          </div>
+        </form>
+        <!-- register end -->
+      </div>
+    </div>
+    <script src="home.js"></script>
+    <script type="module" src="firebase_register_login.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
