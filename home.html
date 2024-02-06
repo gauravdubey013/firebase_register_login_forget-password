@@ -6,7 +6,6 @@
     <title>EClicin - HOME PAGE</title>
 
     <link rel="icon" href="assets/favicon_io/favicon.ico" type="image/x-icon" />
-
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -26,25 +25,61 @@
     />
     <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
 
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="/css/home.css" />
   </head>
 
   <body background="/assets/heroBg.jpeg">
     <header>
-      <h2 class="logo">E-CLINIC WORKS</h2>
+      <a href="/admin.html" style="text-decoration: none">
+        <h2 class="logo">E-CLINIC WORKS</h2>
+      </a>
       <nav class="navigation">
-        <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">APPOINTMENT</a>
-        <a href="#">CONTACT</a>
-        <button class="btnLogin-popup">LOGIN</button>
+        <a href="/home.html">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="/appointment.html">APPOINTMENT</a>
+        <a href="#contact">CONTACT</a>
+        <button class="btn Login-popup" id="loginButton" style="display: none">
+          LOGIN
+        </button>
+        <a href="/admin.html">
+          <button
+            class="btn admin"
+            id="AdminButton"
+            style="display: none"
+            href="/admin.html"
+          >
+            Admin
+          </button>
+        </a>
       </nav>
     </header>
     <div class="wrapper">
       <span class="icon-close">
         <ion-icon name="close-outline"></ion-icon>
       </span>
-      <div class="form-box login">
+      <div class="form-box forgot_pwsd" id="ForgotForm">
+        <h2>FORGOT PASSWORD</h2>
+        <form method="">
+          <span>Enter email to get reset-password email</span>
+          <div class="input-box">
+            <span class="icon"
+              ><ion-icon name="person-outline"></ion-icon
+            ></span>
+            <input type="email" id="forget_password_email" required />
+            <label>Email-ID</label>
+          </div>
+          <button type="submit" id="forget_password_submit" class="btn">
+            Send Email
+          </button>
+        </form>
+        <div class="login-register">
+          <p>
+            Remebered password?
+            <a href="#" class="login-link">Login here</a>
+          </p>
+        </div>
+      </div>
+      <div class="form-box login" id="LoginForm">
         <h2>LOGIN</h2>
         <!-- login start -->
         <form method="">
@@ -96,7 +131,7 @@
           <div class="login-register">
             <p>
               Forget password?
-              <a href="/forget_password.html">RESET</a>
+              <a href="#" class="forgot-password-link">RESET</a>
             </p>
           </div>
           <button type="submit" id="login_with_password_submit" class="btn">
@@ -106,12 +141,12 @@
         <div class="login-register">
           <p>
             Not registered yet?
-            <a href="#" class="register-link"> REGISTER NOW!!</a>
+            <a href="#" class="register-link">REGISTER NOW!!</a>
           </p>
         </div>
         <!-- login end -->
       </div>
-      <div class="form-box register">
+      <div class="form-box register" id="RegForm">
         <h2>Registeration</h2>
         <!-- register start -->
         <form action="#" method="post">
@@ -162,15 +197,14 @@
           <div class="login-register">
             <p>
               Already Registered??
-              <a href="#" class="login-link">LOGIN</a>
+              <a href="#" class="reg-to-login-link">LOGIN</a>
             </p>
           </div>
         </form>
         <!-- register end -->
       </div>
     </div>
-    <script src="home.js"></script>
-    <script type="module" src="firebase_register_login.js"></script>
+    <script type="module" src="/js/register_login.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

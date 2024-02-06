@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EClicin - ADMIN PAGE</title>
+
+    <link rel="icon" href="assets/favicon_io/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/admin.html" style="text-decoration: none">
+        <h2 class="logo">E-CLINIC WORKS</h2>
+      </a>
+      <nav class="navigation">
+        <a href="/home.html">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="/appointment.html">APPOINTMENT</a>
+        <a href="/admin.html">CONTACT</a>
+        <!-- <button class="btnLogin-popup">LOGIN</button> -->
+      </nav>
+    </header>
+    <div class="container">
+      <div class="table">
+        <h1>Users</h1>
+        <table id="userTable">
+          <thead>
+            <tr>
+              <th>User ID</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody id="userTableBody"></tbody>
+        </table>
+      </div>
+      <div class="table">
+        <h1>Appointments</h1>
+        <table id="appointmentTable">
+          <thead>
+            <tr>
+              <th>User ID</th>
+              <th>Patient Name</th>
+              <th>Phone Number</th>
+              <th>Date</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody id="appointmentTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script type="module" src="/js/admin.js"></script>
+  </body>
+</html>

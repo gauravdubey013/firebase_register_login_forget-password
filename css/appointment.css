@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: cadetblue;
+  margin: 10;
+  padding: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+}
+
+form {
+  align-items: center;
+  background-color: rgb(118, 183, 174);
+  padding: 20px 0 12px 0;
+  width: calc(100% / 2 - 20px);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input,
+select {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  background-color: rgb(91, 161, 153);
+  color: #fff;
+}
+
+button {
+  background-color: rgb(91, 161, 153);
+  color: #fff;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.booked {
+  background-color: grey;
+  color: #fff;
+}
+
+.chosen {
+  background-color: rgb(75, 181, 170);
+  color: #000;
+  border-radius: 25%;
+  border-color: black;
+}
+
+.available {
+  background-color: #ddd;
+  color: #666;
+}
+
+.slot {
+  display: inline-block;
+  width: 80px;
+  height: 60px;
+  margin: 5px;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 14px;
+  border: #ddd 2px solid;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.slot:hover {
+  background-color: #e0e0e083;
+  color: black;
+}
+.slot:active {
+  background-color: #009eb6;
+  /* color: black; */
+}
+
+.appointment-slots {
+  margin-top: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  text-align: start;
+  margin-left: 28px;
+  white-space: nowrap;
+}
+
+#movingImage {
+  max-width: 600px;
+  margin: 20px;
+  animation: moveImage 5s infinite linear;
+}
+
+@keyframes moveImage {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

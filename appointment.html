@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/appointment.css" />
+    <title>EClicin - APPOINTMENT PAGE</title>
+
+    <link rel="icon" href="assets/favicon_io/favicon.ico" type="image/x-icon" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
+  </head>
+
+  <body>
+    <img
+      id="movingImage"
+      src="/assets/appoint.gif"
+      alt="Appointment Illustration"
+    />
+
+    <form id="appointmentForm">
+      <center>
+        <h1><u>BOOK APPOINTMENT</u></h1>
+        <label for="name">Your Name:</label>
+        <input type="text" id="patient_name" name="name" required />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="appoint_date">Select Appointment Date:</label>
+        <input
+          type="date"
+          id="appoint_date"
+          name="appoint_date"
+          min=""
+          required
+        />
+        <label for="appoint_time">Select Appointment Time:</label>
+        <div id="appointmentSlots" class="appointment-slots"></div>
+
+        <!-- <div id="appointmentSlots"> -->
+        <!-- <input type="time" id="appoint_time" /> -->
+        <!-- </div> -->
+        <button type="submit" id="appoint_submit">Book Appointment</button>
+      </center>
+    </form>
+    <script type="module" src="/js/appointment.js"></script>
+  </body>
+</html>
